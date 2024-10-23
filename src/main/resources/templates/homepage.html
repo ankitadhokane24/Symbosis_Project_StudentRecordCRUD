@@ -1,0 +1,148 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Student Record System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            margin: 10px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50; /* Darker shade on hover */
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .footer {
+            text-align: center;
+            margin: 30px 0;
+            color: white;
+            padding: 20px;
+            background-color:  #4CAF50; /* Changed color */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Record System</h1>
+        <h2>Manage Your Students Efficiently</h2>
+    </header>
+
+    <nav>
+        <a href="#" th:href="@{/}">Home</a>
+        <a href="#" th:href="@{/forms}">Add Student</a>
+        <a href="#" th:href="@{/update}">Update Student</a>
+        <a href="#" th:href="@{/delete}">Delete Student</a>
+        <a href="#" th:href="@{/datainsert}">Insert Student</a>
+        <a href="#" th:href="@{/showstudent}">Show Student</a>
+    </nav>
+
+    <div class="container">
+        <div class="about-section">
+            <h3>About This System</h3>
+            <p>
+                The Student Record System is designed to help educators and administrators manage student information effectively. 
+                It provides functionalities to add, update, delete, and view student records, ensuring that all relevant 
+                information is easily accessible and well-organized.
+            </p>
+            <p>
+                Whether you're managing a small classroom or a large institution, this system is tailored to meet your needs, 
+                making record-keeping simple and efficient.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Student Record Management</p>
+        <p>Contact us: <a href="mailto:support@studentrecords.com">support@studentrecords.com</a></p>
+        <div class="social-links">
+            <p>Follow us on:
+                <a href="#" target="_blank">Facebook</a> |
+                <a href="#" target="_blank">Twitter</a> |
+                <a href="#" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

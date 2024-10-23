@@ -1,0 +1,60 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <form th:action="@{/datainsert}">
+        <h1>Registration Form</h1>
+        <label>Enter Roll No:</label>
+        <input type="text" placeholder="Roll No" name="Rollno1" required><br>
+        <label>Enter Name:</label>
+        <input type="text" placeholder="Name" name="Name1" required><br>
+        <label>Enter Age:</label>
+        <input type="text" placeholder="Age" name="Age1" required><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

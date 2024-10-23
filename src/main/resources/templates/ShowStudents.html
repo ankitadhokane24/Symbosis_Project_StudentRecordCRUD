@@ -1,0 +1,70 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Show Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .message {
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Students</h1>
+    
+    <div class="message" th:if="${message}" th:text="${message}"></div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="s : ${student1}">
+                <td th:text="${s.rollno}"></td>
+                <td th:text="${s.name}"></td>
+                <td th:text="${s.age}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
